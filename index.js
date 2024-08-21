@@ -16,11 +16,13 @@ function timer(){
 }
 
 function startClock(){
-    if (interval) resetClock()
+    if (interval) stopClock()
     interval = setInterval(timer, 1000)
 }
 
-function stopClock(){}
+function stopClock(){
+    clearInterval(interval)
+}
 
 function resetClock(){
     stopClock()
